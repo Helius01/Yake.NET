@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+    <!-- NuGet Metadata -->
+    <PackageId>Yake.NET</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Mohammad Abedi</Authors>
+    <Description>
+      A C# implementation of YAKE (Yet Another Keyword Extractor) — an unsupervised,
+      lightweight, language-agnostic keyword extraction algorithm for single documents.
+    </Description>
+    <PackageTags>keyword;extraction;nlp;yake;text;analysis</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/helius01/Yake.NET</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/helius01/Yake.NET</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Copyright>Copyright © 2025 Mohammad Abedi</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
