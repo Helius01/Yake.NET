@@ -118,51 +118,6 @@ score(candidate) = ∏(word_scores) / (n × (n + Σ word_scores))
 
 ---
 
-## Publishing to NuGet
-
-### Step 1 — Update metadata in `Yake.NET.csproj`
-
-Edit the following fields:
-
-```xml
-<Authors>YourName</Authors>
-<PackageProjectUrl>https://github.com/YourUsername/Yake.NET</PackageProjectUrl>
-<RepositoryUrl>https://github.com/YourUsername/Yake.NET</RepositoryUrl>
-<Copyright>Copyright © 2025 YourName</Copyright>
-```
-
-### Step 2 — Build in Release mode
-
-```bash
-dotnet build src/Yake.NET/Yake.NET.csproj -c Release
-```
-
-### Step 3 — Pack
-
-```bash
-dotnet pack src/Yake.NET/Yake.NET.csproj -c Release -o ./nupkg
-```
-
-This produces `./nupkg/Yake.NET.1.0.0.nupkg`.
-
-### Step 4 — Get a NuGet API key
-
-1. Go to [https://www.nuget.org](https://www.nuget.org) and sign in
-2. Go to **Account → API Keys → Create**
-3. Set a name, set **Glob pattern** to `Yake.NET`
-4. Copy the key
-
-### Step 5 — Push
-
-```bash
-dotnet nuget push ./nupkg/Yake.NET.1.0.0.nupkg \
-  --api-key YOUR_API_KEY \
-  --source https://api.nuget.org/v3/index.json
-```
-
-Your package will be live on NuGet within a few minutes! 🎉
-
----
 
 ## References
 
